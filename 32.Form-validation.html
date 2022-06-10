@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+        <style>
+        form {
+            margin: auto;
+            padding: 20px;
+            width: 250px;
+            height: 350px;
+            border: 4px solid #ffce49;
+            border-radius: 20px;
+            background-color: #fedc7d;
+        }
+        label {
+            font-weight: bold;
+            color: #f4506b;
+        }
+        .title {
+            font-size: 23px;
+            font-weight: bold;
+            color: #ee1c3f;
+            text-decoration: underline;
+        }
+        input, button {
+            border: #ee1c3f 2px solid;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #f44f6a;
+            color: #ffe8a8;
+        }
+        button:active {
+            border: #fedc7d solid 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="send.php" method="post" name="contactForm" onsubmit="return checkForm()">
+        <label class="title">Contact Form</label>
+
+        <br>
+        <br>
+
+        <label>First Name</label>
+        <br>
+        <input type="text" name="firstname" id="firstname" placeholder="Kofi" >
+
+        <br>
+
+        <label>Last Name</label>
+        <br>
+        <input type="text" name="lastname" id="lastname" placeholder="Owusu" >
+
+        <br>
+
+        <label>Email</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" >
+
+        <br>
+
+        <label>Phone Number</label>
+        <br>
+        <input type="text" name="number" id="number">
+
+        <br>
+        <br>
+
+        <button type="submit" name="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkForm(){
+            var firstName = document.forms["contactForm"]["firstname"].value;
+        if(firstName == null || firstName == ""){
+            alert("First name is required");
+            return false;
+        }
+        var lastName = document.forms["contactForm"]["lastname"].value;
+        if(lastName == null || lastName == ""){
+            alert("Last name is required");
+            return false;
+        }
+        var emailAddress = document.forms["contactForm"]["email"].value;
+        if(emailAddress == null || emailAddress == ""){
+            alert("Email Address is required");
+            return false;
+        }
+        var phoneNumber = document.forms["contactForm"]["number"].value;
+        if(phoneNumber == null || phoneNumber == ""){
+            alert("Phone Number is required");
+            return false;
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Broke Am I?</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            color: #300757;
+        }
+        .container {
+            margin: auto;
+            width: 380px; height: max-content;
+        }
+        .budgetBox, .newPBox {
+            background-color: #bfb7db;
+            border: #300757 solid 1px;
+            border-radius: 30px;
+            padding: 15px;
+            height: 250px;
+        }
+        input {
+            width: 100px;
+            height: 15px;
+            border-radius: 20px;
+            border: #300757 solid 1px;
+        }
+        .radio {
+            display: flex;
+            margin-right: 130px;
+        }
+        h4 {
+            position: relative;
+            bottom: 20px;
+            font-weight: normal;
+        }
+
+        .newPBox {
+            background-color: #eb9677;
+            margin-top: 15px;
+            height: max-content;
+        }
+        .input2 {
+            width: 150px;
+        }
+
+        button {
+            background-color: #0e0eb6;
+            color: white;
+            font-size: x-large;
+            border: none;
+            border-radius: 10px;
+            display: block;
+            width: 200px;
+            height: 30px;
+            margin: 20px auto;
+        }
+        button:active {
+            border: #b7a4a4e5 3px solid;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 align="center">How broke am I?</h1>
+
+    <div class="container" >
+        <div class="budgetBox">
+            <h3>Budget</h3>
+            <input type="number" id="budget">
+
+            <h3>Monthly Costs</h3>
+            <input type="number" placeholder="rent" id="rent">
+            <input type="number" placeholder="utilities" id="utilities">
+
+            <h3>Savings Priority</h3>
+            <div class="radio">
+                <input type="radio" name="yes" id="high" onselect="selectPriority('high')"> <h4>High</h4>
+                <input type="radio" name="yes" id="medium" onselect="selectPriority('medium')"> <h4>Medium</h4>
+                <input type="radio" name="yes" id="low" onselect="selectPriority('low')"> <h4>Low</h4>
+            </div>
+        </div>
+
+        <div class="newPBox">
+            <h3 style="position:relative; bottom: 15px;">New Purchase</h3>
+            <input style="position:relative; bottom: 15px;" class="input2" type="text" placeholder="description" id="description">
+            <input style="position:relative; bottom: 15px;" type="text" placeholder="price" id="price">
+        </div>
+    </div>
+
+    <button align="center" onclick="calculate();">Compute</button>
+
+    <p id="result"></p>
+    <script src="12p-budgeting-app.js"></script>
+
+</body>
+</html>
