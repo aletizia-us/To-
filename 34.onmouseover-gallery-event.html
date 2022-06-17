@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .container {
+            margin: auto;
+            width: max-content;
+            height: max-content;
+        }
+        img {
+            width: 200px;
+            height: 180px;
+        }
+        #active-img {
+            border: 5px solid aliceblue;
+        }
+        .big-img {
+            width: 1020px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Gallery</h1>
+
+    <div class="container">
+        <div class="images">
+            <img id="img1" src="img1.jpg" alt="">
+            <img id="img2" src="img2.jpg" alt="">
+            <img id="img3" src="img3.jpg" alt="">
+            <img id="img4" src="img4.jpg" alt="">
+            <img id="img5" src="img5.jpg" alt="">
+        </div>
+
+        <br>
+
+        <div>
+            <img id="bigImg" class="big-img">
+        </div>
+    </div>
+
+    <script>
+        var images = document.getElementsByClassName("images")[0];
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+        var img4 = document.getElementById("img4");
+        var img5 = document.getElementById("img5");
+        var bigImg = document.getElementById("bigImg");
+
+        //img1
+        img1.onmouseover = function(){
+            img1.setAttribute("id", "active-img");
+            bigImg.src = img1.src;
+        }
+        img1.onmouseout = function(){
+                img1.setAttribute("id", "");
+                bigImg.src = img1.src;
+        }
+
+        //img2
+        img2.onmouseover = function(){
+            img2.setAttribute("id", "active-img");
+            bigImg.src = img2.src;
+        }
+        img2.onmouseout = function(){
+            img2.setAttribute("id", "");
+            bigImg.src = img2.src;
+        }
+
+        //img3
+        img3.onmouseover = function(){
+            img3.setAttribute("id", "active-img");
+            bigImg.src = img3.src;
+        }
+        img3.onmouseout = function(){
+            img3.setAttribute("id", "");
+            bigImg.src = img3.src;
+        }
+
+        //img4
+        img4.onmouseover = function(){
+            img4.setAttribute("id", "active-img");
+            bigImg.src = img4.src;
+        }
+        img4.onmouseout = function(){
+            img4.setAttribute("id", "");
+            bigImg.src = img4.src;
+        }
+
+        //img5
+        img5.onmouseover = function(){
+            img5.setAttribute("id", "active-img");
+            bigImg.src = img5.src;
+        }
+        img5.onmouseout = function(){
+            img5.setAttribute("id", "");
+            bigImg.src = img5.src;
+        }
+
+    </script>
+</body>
+</html>

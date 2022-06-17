@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reddit</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div {
+            width: max-content;
+            height: max-content;
+            margin: auto;
+        }
+        button {
+            width: 100px;
+            height: 35px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            margin: 5px;
+        }
+        button:active{
+            border: #c6c6c6 2px solid;
+        }
+        #upvote {
+            background-color: green;
+        }
+        #downvote {  
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Bear of the Year</h1>
+        
+        <br>
+
+        <p>Nom nom nom</p>
+
+        <h2 id="votes"></h2>
+
+        <button id="upvote">Upvote</button>
+        <button id="downvote">Downvote</button>
+    </div>
+
+    <script>
+        //store all the necessary values
+        var votes = document.getElementById("votes");
+        var upvote = document.getElementById("upvote");        
+        var downvote = document.getElementById("downvote");
+
+        //this is the default number of votes
+        var counter = 0;
+
+        //when the upvote button is clicked the counter's value should increase by one vote and it should show
+        upvote.onclick = function(){
+            votes.innerHTML = counter++ + " votes";
+        }
+
+        //when the downvote button is clicked the counter's changed value(from the upvote) should decrease by one vote, and it should display
+        downvote.onclick = function(){
+            votes.innerHTML = counter-- + " votes";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza's Ready</title>
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-color: tan;
+        }
+        div {
+            background-color: #fdf1dc;
+            padding: 5px;
+            width: 250px;
+            height: max-content;
+            margin: auto;
+        }
+        .orders{
+            border: 5px solid red;
+        }
+        .ready {
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="orders">
+        <ul id="orders">
+        </ul>
+    </div>
+
+    <div class="ready">
+        <ul id="ready">
+            
+        </ul>
+    </div>
+
+    <script>
+       
+        var orderedPizzas = document.getElementById("orders");
+        var readyPizzas = document.getElementById("ready");
+
+        var pizza1 =document.createElement("li");
+        var pizza2 =document.createElement("li");
+        var pizza3 =document.createElement("li");
+        var pizza4 =document.createElement("li");
+
+        orderedPizzas.appendChild(pizza1);
+        pizza1.innerHTML = "2 Pizza Marinaras";
+        orderedPizzas.appendChild(pizza2);
+        pizza2.innerHTML = "3 Pizza Romanas";
+
+        readyPizzas.appendChild(pizza3);
+        pizza3.innerHTML = "1 Pizza Margherita";
+        readyPizzas.appendChild(pizza4);
+        pizza4.innerHTML = "Plain Cheese" + " &" + " Jumbo Pizza";
+
+        var pizzas = new Array("Pizza Marinara", "Pizza Romana", "Pizza Margherita", "Plain Cheese", "Jumbo Pizza");
+
+    </script>
+</body>
+</html>
